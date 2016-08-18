@@ -1,6 +1,5 @@
 package config;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -18,12 +17,10 @@ public class BuilderConfigBean {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("package "+packetPath.replace("/", ".") + "." + StringUtil.downCase(configName)+";\n\n");
 //		buffer.append("##import##\n\n");
-		buffer.append("public class "+StringUtil.firstUpCase(configName)+" {\n\n");
-//		List<Pair<Integer, String>> fields = oe.readTitle(excelName, sheetName, 3);
-		List<Pair<Integer, String>> fields = new ArrayList<Pair<Integer,String>>();
-		fields.add(new Pair<Integer, String>(XSSFCell.CELL_TYPE_NUMERIC, "id"));
-		fields.add(new Pair<Integer, String>(XSSFCell.CELL_TYPE_STRING, "test"));
+		buffer.append("public class "+StringUtil.firstUpCase(configName)+"Config {\n\n");
+		List<Pair<Integer, String>> fields = oe.readTitle(excelName, sheetName, 3);
 		StringBuffer setgetBuff = new StringBuffer();
+		//TODO添加数据类型
 		for(Pair<Integer, String> pair : fields) {
 			switch (pair.getLeft()) {
 			case XSSFCell.CELL_TYPE_NUMERIC:
