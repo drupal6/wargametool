@@ -28,5 +28,14 @@ public class StringUtil {
 	public static String downCase(String str) {
 		return str.toLowerCase();
 	}
+	
+	/**
+	 * 全部大写
+	 * @param str
+	 * @return
+	 */
+	public static String upCase(String str) {
+		return str.toUpperCase();
+	}
 
 }
