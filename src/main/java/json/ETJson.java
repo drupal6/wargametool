@@ -119,8 +119,13 @@ public abstract class ETJson {
 			if (value == null || value.trim().isEmpty()) {
 				return 0;
 			}
-			Integer i = Integer.parseInt(value);
-			return i.intValue();
+			try {
+				Integer i = Integer.parseInt(value);
+				return i.intValue();
+			} catch (Exception e) {
+				Double d = Double.parseDouble(value);
+				return d.intValue();
+			}
 		}
 		if (field.getType() == Float.TYPE) {
 			if (value == null || value.trim().isEmpty()) {

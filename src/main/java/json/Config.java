@@ -10,7 +10,13 @@ public class Config {
 	public static String EXCEL_PATH = DAT_PATH + "excel" + File.separator;
 	//Excel
 	public static String TEST_FILE = EXCEL_PATH + "Test.xlsx";
+ 	public static String TEST_FILE = EXCEL_PATH + "Test.xlsx";
+ 	public static String TEST_FILE = EXCEL_PATH + "Test.xlsx";
+ 	public static String TEST_FILE = EXCEL_PATH + "Test.xlsx";
  	//##excelfile##
+
+
+
 
 
 
